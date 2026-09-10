@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado Interativo</title>
+
+    <style>
+        #quadrado {
+            width: 150px;
+            height: 100px;
+            background-color: green;
+            color: white;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="quadrado">Clique aqui!</div>
+
+    <script>
+        const quadrado = document.querySelector("#quadrado");
+
+        quadrado.addEventListener("mouseenter", function() {
+            quadrado.textContent = "Entrou!";
+            quadrado.style.backgroundColor = "gray";
+        });
+
+        quadrado.addEventListener("mouseleave", function() {
+            quadrado.textContent = "Saiu!";
+            quadrado.style.backgroundColor = "green";
+        });
+    </script>
+
+</body>
+</html>
